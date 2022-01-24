@@ -1,0 +1,30 @@
+.Navegation {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(245, 238, 238);
+
+}
+
+.Navegation h1 {
+    font-family:'Comforter', cursive ;
+    font-weight: bolder;
+    margin: 0.3em;
+}
+
+.Navegation ul {
+    display: flex;
+    margin: 0;
+}
+.Navegation ul li {
+    font-family: 'Fuzzy Bubbles', cursive;
+    list-style-type: none;
+    margin: 1em 0em;
+
+}
+.Navegation ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+    padding: 0.5em;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './navBar.css'
+import img from './carrito.png'
 
 const navBar = () => {
   return <nav className='Navegation'>
@@ -9,6 +10,8 @@ const navBar = () => {
       <li> <a href='' alt='link-products' >Products</a> </li>
       <li> <a href='' alt='link-about' >About</a> </li>
       <li> <a href='' alt='link-contact' >Contact</a> </li>
+      <li> <a href='' alt='link-contact' > <img src={img} alt='imagen-carrito' /> </a> </li>
+      
     </ul>
   </nav>;
   

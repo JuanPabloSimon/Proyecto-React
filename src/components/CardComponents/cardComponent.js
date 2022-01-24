@@ -2,9 +2,10 @@ import React from 'react'
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button} from 'reactstrap'
 
 import './cardComponent.css';
-import img from './haworthiaRetusa.jpg'
 
-const CardComponent = ({name, value, carac}) => (
+
+
+const CardComponent = ({name, value, carac, img}) => (
   <div className='contenedor'>
   <Card>
     <CardBody>

@@ -1,4 +1,4 @@
-.App {
-  text-align: center;
+.CardContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
-

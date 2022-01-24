@@ -1,24 +1,25 @@
 .Navegation {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(245, 238, 238);
+    background-color: #ffff;
 
 }
 
 .Navegation h1 {
     font-family:'Comforter', cursive ;
     font-weight: bolder;
-    margin: 0.3em;
+    margin-top: 0.5em;
 }
 
 .Navegation ul {
     display: flex;
+    align-items: center;
     margin: 0;
 }
 .Navegation ul li {
     font-family: 'Fuzzy Bubbles', cursive;
     list-style-type: none;
-    margin: 1em 0em;
+    margin: 0.8em 0em;
 
 }
 .Navegation ul li a {
@@ -27,4 +28,10 @@
     text-decoration: none;
     color: rgb(61, 61, 61);
     padding: 0.5em;
+}
+
+.Navegation img {
+    max-width: 40px ;
+    max-height: 40px;
+    margin: 0 0 0 2em;
 }

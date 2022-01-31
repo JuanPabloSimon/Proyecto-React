@@ -1,0 +1,43 @@
+.counter {
+    display: grid;
+    grid-template-areas: 
+    "decrement quanity increment"
+    "addToCart addToCart addToCart " ;
+    grid-auto-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.05px;
+}
+.decrement {
+    grid-area: decrement;
+    border: solid 0.3px gray;
+    font-weight: bolder;
+    font-size: 1.5em;
+    /* color: #DAFFEF; */
+    background-color: #fff;
+}
+
+.increment {
+    grid-area: increment;
+    border: solid 0.3px gray;
+    font-weight: bolder;
+    font-size: 1.5em;
+    background-color: #FFF;
+}
+
+.quanity {
+    grid-area: quanity;
+    border-top: solid 0.3px gray;
+    margin: 0;
+    font-size: 1.5em;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.addToCart {
+    grid-area: addToCart;
+    border: solid 0.3px gray;
+    /* background-color: #64B6AC; */
+    /* background-color: #4B644A; */
+    background-color: #E4BE9E;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight: bold;
+}

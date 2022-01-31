@@ -1,8 +1,9 @@
 import React from 'react'
-import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button} from 'reactstrap'
+import { Card, CardBody, CardTitle, CardSubtitle, CardText} from 'reactstrap'
+
 
 import './cardComponent.css';
-
+import ItemCount from '../ItemCount/itemCount';
 
 
 const CardComponent = ({name, value, carac, img}) => (
@@ -13,6 +14,7 @@ const CardComponent = ({name, value, carac, img}) => (
       <img src={img} alt='plant-img' />
       <CardSubtitle className="mb-2 text-muted" tag="h6" > {value} </CardSubtitle>
       <CardText> {carac} </CardText>
+      <ItemCount onAdd={() => {console.log('Producto Agregado al carrito')}}/>
     </CardBody>
   </Card>
 </div>

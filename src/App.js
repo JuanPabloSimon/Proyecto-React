@@ -7,8 +7,8 @@ import CardComponent from './components/CardComponents/cardComponent';
 import Header from './components/Header/header';
 
 import img from './components/CardComponents/haworthiaRetusa.jpg'
-import img2 from './components/CardComponents/crassulaMuscosa.jpg'
-import img3 from './components/CardComponents/NarizDeBrracho.jpg'
+import img2 from './components/CardComponents/cordonSanJose.jpg'
+import img3 from './components/CardComponents/desconocida4.jpg'
 
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
     <div>  
         <NavBar/>
         <Header/>
-        <div className='CardContainer'>
+        <div className='CardContainer'>                                                                                                                                                                                                                                                   
         <CardComponent 
         name= 'Hawortia Retusa'
         value='valor en pesos'

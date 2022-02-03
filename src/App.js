@@ -3,21 +3,22 @@ import './App.css'
 
 // Components 
 import NavBar from './components/NavBar/NavBar';
-import CardComponent from './components/CardComponents/cardComponent';
+// import CardComponent from './components/CardComponents/cardComponent';
 import Header from './components/Header/header';
 
-import img from './components/CardComponents/haworthiaRetusa.jpg'
-import img2 from './components/CardComponents/cordonSanJose.jpg'
-import img3 from './components/CardComponents/desconocida4.jpg'
+// import img from './components/CardComponents/haworthiaRetusa.jpg'
+// import img2 from './components/CardComponents/cordonSanJose.jpg'
+// import img3 from './components/CardComponents/desconocida4.jpg'
+import ItemListContainer from './components/CardComponents/itemListContainer/itemListContainer';
 
 
 const App = () => {
   return (
-    <div>  
+    <div className='main'>  
         <NavBar/>
         <Header/>
         <div className='CardContainer'>                                                                                                                                                                                                                                                   
-        <CardComponent 
+        {/* <CardComponent 
         name= 'Hawortia Retusa'
         value='valor en pesos'
         carac='características'
@@ -31,9 +32,9 @@ const App = () => {
         name= 'Nariz de Borracho'
         value='valor en pesos'
         carac='características'
-        img={img3}/>
+        img={img3}/> */}
+        <ItemListContainer/>
         </div>
-        
     </div>);
 
 };

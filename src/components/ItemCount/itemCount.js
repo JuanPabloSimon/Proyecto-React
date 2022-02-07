@@ -22,11 +22,13 @@ const ItemCount = ({onAdd}) => {
     }
     
     return ( 
-        <div className='counter'>
-            <button className='decrement' onClick={handlerCounterDown}> - </button>
-            <p className='quanity'>{counter}</p>
-            <button className='increment' onClick={handlerCounterUp}> + </button>
-            <button className='addToCart' onClick={onAdd}> Agregar al carrito </button>
+        <div className='addCart'>
+            <div className='counter' >
+                <button className='decrement' onClick={handlerCounterDown}> - </button>
+                <p className='quanity'>{counter}</p>
+                <button className='increment' onClick={handlerCounterUp}> + </button>
+                <button className='addToCart' onClick={onAdd}> Agregar al carrito </button>
+            </div>
         </div>
     );
 

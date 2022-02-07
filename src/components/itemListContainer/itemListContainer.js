@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import ItemList from '../../itemList/itemList';
-import prod from '../../../products';
+import ItemList from '../itemList/itemList';
+import prod from '../../products';
 import './itemListContainer.css'
 
 const ItemListContainer = () => {
@@ -31,3 +31,4 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
+

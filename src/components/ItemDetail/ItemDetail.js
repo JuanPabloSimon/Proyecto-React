@@ -2,10 +2,12 @@ import React from "react";
 import ItemCount from "../ItemCount/itemCount";
 import './ItemDetail.css'
 
+
+
 const ItemDetail = ({ detail }) => {
   return (
     <div className="itemDetail">
-      <img  className="img" src={detail.imgUrl} alt="{detail.name}" style={{maxWidth: 15 + 'em'}}/>
+      <img  className="img" src={detail.imgUrl} alt={detail.name} style={{maxWidth: 15 + 'em'}}/>
       <h2 className="title" > {detail.name} </h2>
       <h3 className="titleCarac"> Características del producto</h3>
       <p className="carac" > Frecuencia de Riego : {detail.irrigationFrequency}  - Ubicación: {detail.ubication}</p>

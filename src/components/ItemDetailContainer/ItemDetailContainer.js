@@ -11,14 +11,12 @@ const ItemDetailContainer = () => {
         const promiseDetail = new Promise((resolve ,reject) =>{ 
             setTimeout(() => {
                 resolve(prod)
-            },2000)
+            },1000) 
         })
-        promiseDetail.then((res) => {setDetails(res);
+        promiseDetail.then((res) => {setDetails(res);   
         }).catch((error) => {
             console.log(error)
         })
-
-        console.log(details)
 
     },);
   
@@ -28,7 +26,7 @@ const ItemDetailContainer = () => {
           details.map((detail) => (
               <ItemDetail key={detail.id} detail={detail}>
               </ItemDetail>
-            )).slice(0,1)
+            )) 
       }
         </div>
     );

@@ -16,13 +16,17 @@
     align-items: center;
     margin: 0;
 }
-.Navegation ul li {
+.Navegation ul link {
     font-family: 'Fuzzy Bubbles', cursive;
     list-style-type: none;
     margin: 0.8em 0em;
 
 }
-.Navegation ul li a {
+
+.Link {
+    font-family: 'Fuzzy Bubbles', cursive;
+    list-style-type: none;
+    margin: 0.8em 0em;
     display: flex;
     align-items: center;
     text-decoration: none;

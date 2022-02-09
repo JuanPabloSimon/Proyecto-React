@@ -1,6 +1,8 @@
 import React from 'react';
 import './item.css'
 // import ItemCount from '../ItemCount/itemCount.js'
+import { Link } from 'react-router-dom';
+// import prod from '../../products';
 
 const Item = ({product}) => {
   return (
@@ -9,7 +11,7 @@ const Item = ({product}) => {
         <img className='imgProd' src={product.imgUrl} alt={product.name}/>
         <p> {product.price} </p>
         {/* <ItemCount onAdd={() => {console.log('Producto Agregado al carrito')}}/> */}
-        <button> Ver mas detalles</button>
+        <Link to='' className='link' >Ver Más</Link>
     </div>
     );
 };

@@ -1,26 +1,31 @@
 import React from 'react';
 import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Components 
 import NavBar from './components/NavBar/NavBar';
-// import CardComponent from './components/CardComponents/cardComponent';
-import Header from './components/Header/header';
-import ItemListContainer from './components/itemListContainer/itemListContainer';
+
+//views 
+import Home from './Views/Home/Home';
+// import Details from './Views/Details/Details';
+import Contact from './Views/Contact/Contact'
+import About from './Views/About/About'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-
-// import img from './components/CardComponents/haworthiaRetusa.jpg'
-// import img2 from './components/CardComponents/cordonSanJose.jpg'
-// import img3 from './components/CardComponents/desconocida4.jpg'
-
 
 const App = () => {
   return (
+    <Router>
     <div className='main'>  
         <NavBar/>
-        <Header/>
-        <ItemListContainer/>
-        <ItemDetailContainer/>
-    </div>);
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/detail/:id" element={<ItemDetailContainer/>} />
+          <Route path="/About" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
+        </Routes>
+    </div>
+    </Router>
+    );
 
 };
 

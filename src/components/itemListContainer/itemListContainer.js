@@ -3,6 +3,7 @@ import ItemList from '../itemList/itemList';
 import prod from '../../products';
 import './itemListContainer.css'
 
+
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
 
@@ -11,7 +12,7 @@ const ItemListContainer = () => {
         const promiseProducts = new Promise((resolve ,reject) =>{ 
             setTimeout(() => {
                 resolve(prod)
-            },1000)
+            })
         })
         promiseProducts
         .then((res) => {setProducts(res);
@@ -25,7 +26,7 @@ const ItemListContainer = () => {
   
     return (
         <div className='listCont'>
-            <ItemList products={products}></ItemList>
+                <ItemList products={products}></ItemList>    
         </div>
     );
 };

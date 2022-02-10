@@ -51,3 +51,7 @@
     grid-area: addToCart;
     justify-self: center;
 }
+
+.h3 {
+    background-color: aliceblue;
+}

@@ -19,7 +19,7 @@ const prod = [
         // image: {img2} ,
         imgUrl: "https://dl.dropbox.com/s/qfyv8cyxq7t5bff/haworthiaRetusa.jpg",
         price: "$300",
-        // irrigationFrequency: "1/2 veces por semana.",
+        irrigationFrequency: "1/2 veces por semana.",
         ubication: "Planta de exterior, sol moderado/poco.",
     },
     { 
@@ -46,8 +46,8 @@ const prod = [
         // image: {img3} ,
         imgUrl:"https://dl.dropbox.com/s/qwlg7g8ovjhp2ao/PlantaFantasma.jpg",
         price: "$250 - $300",
-        irrigationFrequency: "2/3 veces por semana.",
-        ubication: "Planta de exterior, sol intemertmedio.",
+        irrigationFrequency: "1/2 veces por semana.",
+        ubication: "Planta de exterior, sol moderado/poco.",
     },
     { 
         id:6,
@@ -55,8 +55,8 @@ const prod = [
         // image: {img3} ,
         imgUrl:"https://dl.dropbox.com/s/p23qvp2hnlajpn9/plantaCebra.jpg",
         price: "$300",
-        irrigationFrequency: "2/3 veces por semana.",
-        ubication: "Planta de exterior, sol intemertmedio.",
+        irrigationFrequency: "1/2 veces por semana.",
+        ubication: "Planta de exterior, sol intemertmedio/poco (mucho sol hara que se sequen las puntas de la planta).",
     },
     { 
         id:7,
@@ -64,8 +64,8 @@ const prod = [
         // image: {img3} ,
         imgUrl:"https://dl.dropbox.com/s/g60qsbhbsjb73fb/aeoniumKiwi.jpg",
         price: "$200 - $400",
-        irrigationFrequency: "2/3 veces por semana.",
-        ubication: "Planta de exterior, sol intemertmedio.",
+        irrigationFrequency: "1/2 veces por semana.",
+        ubication: "Planta de exterior, sol intemertmedio (preferentemente sol de la mañana o tarde/noche).",
     },
     { 
         id:8,
@@ -73,7 +73,7 @@ const prod = [
         // image: {img3} ,
         imgUrl:"https://dl.dropbox.com/s/jhv4fo5pcezmnlg/echeveriaRunyonii.jpg",
         price: "$250 - $350",
-        irrigationFrequency: "2/3 veces por semana.",
+        irrigationFrequency: "1/2 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio.",
     },
     { 
@@ -81,7 +81,7 @@ const prod = [
         name:"Aeonium Haworthii",
         // image: {img3} ,
         imgUrl:"https://dl.dropbox.com/s/edn4jykycyxt43j/aeoniumHaworthii2.jpg",
-        price: "$250 - $350",
+        price: "$350 - $500",
         irrigationFrequency: "2/3 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio.",
     },
@@ -99,8 +99,8 @@ const prod = [
         name:"Cactus",
         // image: {img3} ,
         imgUrl:"https://dl.dropbox.com/s/rzlatsjet9ncdrs/cactus1.jpg",
-        price: "$250",
-        irrigationFrequency: "2/3 veces por semana.",
+        price: "$300",
+        irrigationFrequency: "1 vez por semana, 2 como mucho.",
         ubication: "Planta de exterior, sol intemertmedio.",
     },
     { 
@@ -109,8 +109,8 @@ const prod = [
         // image: {img3} ,
         imgUrl:"https://dl.dropbox.com/s/84n6io50wnri4gp/cactus2.jpg",
         price: "$300",
-        irrigationFrequency: "2/3 veces por semana.",
-        ubication: "Planta de exterior, sol intemertmedio.",
+        irrigationFrequency: "1 vez por semana, 2 como mucho.",
+        ubication: "Planta de exterior, resiste sol las 24hs.",
     },
     
 ]

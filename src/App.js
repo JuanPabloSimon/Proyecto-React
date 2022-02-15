@@ -8,10 +8,10 @@ import Footer from './components/Footer/footer';
 
 //views 
 import Home from './Views/Home/Home';
-// import Details from './Views/Details/Details';
 import Contact from './Views/Contact/Contact'
 import About from './Views/About/About'
 import ItemDetailContainer from './Views/ItemDetailContainer/ItemDetailContainer';
+import Cart from './Views/Cart/cart';
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/detail/:id" element={<ItemDetailContainer/>} />
           <Route path="/About" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path='/cart' element= {<Cart/>} />
         </Routes>
         <Footer/>
     </div>

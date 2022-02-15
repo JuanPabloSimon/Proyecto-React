@@ -47,9 +47,10 @@
     font-weight: bolder;
 }
 
-.addCart {
+.counter {
     grid-area: addToCart;
     justify-self: center;
+    align-items: center;
 }
 
 .h3 {

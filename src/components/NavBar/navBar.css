@@ -16,12 +16,6 @@
     align-items: center;
     margin: 0;
 }
-.Navegation ul link {
-    font-family: 'Fuzzy Bubbles', cursive;
-    list-style-type: none;
-    margin: 0.8em 0em;
-
-}
 
 .Link {
     font-family: 'Fuzzy Bubbles', cursive;
@@ -32,6 +26,11 @@
     text-decoration: none;
     color: rgb(61, 61, 61);
     padding: 0.5em;
+}
+.Link:hover {
+    color: black;
+    border-bottom: 0.5px groove gray;
+    border-bottom-style: dashed;
 }
 
 .Navegation img {

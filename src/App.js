@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/footer';
 
+// Context
+import { CartProvider } from './Context/cartContext';
+
 //views 
 import Home from './Views/Home/Home';
 import Contact from './Views/Contact/Contact'
@@ -16,6 +19,7 @@ import Cart from './Views/Cart/cart';
 const App = () => {
   return (
     <Router>
+      <CartProvider>
     <div className='main'>  
         <NavBar/>
         <Routes>
@@ -27,6 +31,7 @@ const App = () => {
         </Routes>
         <Footer/>
     </div>
+    </CartProvider>
     </Router>
     );
 

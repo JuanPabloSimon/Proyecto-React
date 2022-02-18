@@ -12,6 +12,8 @@ const prod = [
         price: "$350",
         irrigationFrequency: "1/2 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:"2",
@@ -21,6 +23,8 @@ const prod = [
         price: "$300",
         irrigationFrequency: "1/2 veces por semana.",
         ubication: "Planta de exterior, sol moderado/poco.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:3,
@@ -30,6 +34,8 @@ const prod = [
         price: "$250",
         irrigationFrequency: "2/3 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:"4",
@@ -39,6 +45,8 @@ const prod = [
         price: "$200 - $250",
         irrigationFrequency: "2/3 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:5,
@@ -48,6 +56,8 @@ const prod = [
         price: "$250 - $300",
         irrigationFrequency: "1/2 veces por semana.",
         ubication: "Planta de exterior, sol moderado/poco.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:6,
@@ -57,6 +67,8 @@ const prod = [
         price: "$300",
         irrigationFrequency: "1/2 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio/poco (mucho sol hara que se sequen las puntas de la planta).",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:7,
@@ -66,6 +78,8 @@ const prod = [
         price: "$200 - $400",
         irrigationFrequency: "1/2 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio (preferentemente sol de la mañana o tarde/noche).",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:8,
@@ -75,6 +89,8 @@ const prod = [
         price: "$250 - $350",
         irrigationFrequency: "1/2 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:9,
@@ -84,6 +100,8 @@ const prod = [
         price: "$350 - $500",
         irrigationFrequency: "2/3 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:10,
@@ -93,6 +111,8 @@ const prod = [
         price: "$200 - $300",
         irrigationFrequency: "2/3 veces por semana.",
         ubication: "Planta de exterior, sol intemertmedio.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:11,
@@ -102,6 +122,8 @@ const prod = [
         price: "$300",
         irrigationFrequency: "1 vez por semana, 2 como mucho.",
         ubication: "Planta de exterior, sol intemertmedio.",
+        cantidad: 0,
+        stock: 4,
     },
     { 
         id:12,
@@ -111,6 +133,8 @@ const prod = [
         price: "$300",
         irrigationFrequency: "1 vez por semana, 2 como mucho.",
         ubication: "Planta de exterior, resiste sol las 24hs.",
+        cantidad: 0,
+        stock: 4,
     },
     
 ]

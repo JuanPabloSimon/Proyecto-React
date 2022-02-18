@@ -20,7 +20,6 @@ const ItemListContainer = () => {
         .catch((error) => {
             console.log(error)
         })
-        console.log(products);
 
     },);
   

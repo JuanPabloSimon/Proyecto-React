@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
     var id = useParams();
     var userID = id.id;
 
-    console.log(userID)
 
     useEffect(() => { 
             const promiseDetail = new Promise((resolve ,reject) =>{ 
@@ -23,7 +22,6 @@ const ItemDetailContainer = () => {
             }).catch((error) => {
                 console.log(error)
             })
-            console.log(details)
     },[]);
   
     return (

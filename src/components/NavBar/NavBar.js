@@ -1,7 +1,7 @@
 import React from 'react';
 import './navBar.css'
-import img from '../assets/carrito.png'
 import { Link } from 'react-router-dom';
+import CartWidget from '../cartWidget/cartWidget';
 
 const navBar = () => {
   return <nav className='Navegation'>
@@ -16,7 +16,7 @@ const navBar = () => {
       <Link to='/' className='Link' > Products</Link>
       <Link to='/about' className='Link' > About</Link>
       <Link to='/contact' className='Link' > Contact</Link>
-      <Link to='/Cart' className='Link' > <img src={img} alt='imagen-carrito' /> </Link>
+      <Link to='/Cart' className='Link' > <CartWidget/> </Link>
     </ul>
   </nav>;
   

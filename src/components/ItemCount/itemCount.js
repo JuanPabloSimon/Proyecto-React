@@ -20,7 +20,7 @@ const ItemCount = ({data}) => {
             if (counter !== 0) {
                 itemsAgregados.push(data)
                 data.cantidad = counter;
-                alert('Has agregado ' + data.cantidad + ' ' + data.name + 'al carrito')
+                alert('Has agregado ' + data.cantidad + ' ' + data.name + ' al carrito')
             } else {
                 alert("no se sumaron productos")
             }

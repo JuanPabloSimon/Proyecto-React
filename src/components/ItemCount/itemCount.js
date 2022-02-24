@@ -8,7 +8,10 @@ import './itemCount.css'
 const ItemCount = ({data}) => {
     
     const  [counter, setCounter] = useState(0);
-    const [itemsAgregados, setItemsAgregados] = useContext(CartContext)
+    const [itemsAgregados, setItemsAgregados] = useContext(CartContext) 
+    // const amount = useContext(CartContext)
+
+
 
     const onAdd = () => {
         const findId = itemsAgregados.find( item => item.id === data.id)
@@ -19,7 +22,7 @@ const ItemCount = ({data}) => {
         } else {
             if (counter !== 0) {
                 itemsAgregados.push(data)
-                data.cantidad = counter;
+                data.cantidad = counter; 
                 alert('Has agregado ' + data.cantidad + ' ' + data.name + ' al carrito')
             } else {
                 alert("no se sumaron productos")

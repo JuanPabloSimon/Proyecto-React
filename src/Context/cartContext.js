@@ -7,8 +7,9 @@ const initialState = [];
 export const CartProvider = ({children}) => {
 
     const [itemsAgregados, setItemsAgregados] = useState(initialState)
-    const [amount, setAmount] = useState(initialState)
+    // var amount = useState(0)
+    
 
     
-    return <CartContext.Provider value={[itemsAgregados, setItemsAgregados, amount, setAmount ]}>{children}</CartContext.Provider>
+    return <CartContext.Provider value={[itemsAgregados, setItemsAgregados]}>{children}</CartContext.Provider>
 }

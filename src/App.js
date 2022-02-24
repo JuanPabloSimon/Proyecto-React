@@ -15,6 +15,7 @@ import Contact from './Views/Contact/Contact'
 import About from './Views/About/About'
 import ItemDetailContainer from './Views/ItemDetailContainer/ItemDetailContainer';
 import Cart from './Views/Cart/cart';
+import Categories from './Views/categories/categories';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/About" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path='/cart' element= {<Cart/>} />
+          <Route path='/categorie/:type' element= {<Categories/>} />
         </Routes>
         <Footer/>
     </div>

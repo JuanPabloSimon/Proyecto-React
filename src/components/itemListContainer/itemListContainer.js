@@ -1,27 +1,30 @@
 import React, {useState, useEffect} from 'react';
 import ItemList from '../itemList/itemList';
-import prod from '../../products';
 import './itemListContainer.css'
 
+//Firebase - FIRESTORE
+import { collection, query, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/firebaseConfig';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => { 
 
-        const promiseProducts = new Promise((resolve ,reject) =>{ 
-            setTimeout(() => {
-                resolve(prod)
+        const getProducts = async () => {
+            const q = query(collection(db, "Productos"));
+            const prods =[];
+            const querySnapshot = await getDocs(q);
+            // console.log('DATA:', querySnapshot)
+            querySnapshot.forEach((doc) => {
+                prods.push({...doc.data(), id: doc.id})
             })
-        })
-        promiseProducts
-        .then((res) => {setProducts(res);
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+            // console.log(prods)
+            setProducts(prods)
+        }
+        getProducts()
 
-    },);
+    }, []);
   
     return (
         <div className='listCont'>

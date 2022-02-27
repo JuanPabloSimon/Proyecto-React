@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import ItemCount from "../ItemCount/itemCount";
 import './ItemDetail.css'
 
@@ -6,6 +6,10 @@ import './ItemDetail.css'
 
 
 const ItemDetail = ({ detail }) => {
+  
+
+
+  
 
   return (
     <div className="itemDetail">

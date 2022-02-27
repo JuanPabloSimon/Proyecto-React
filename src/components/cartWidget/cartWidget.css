@@ -1,7 +1,17 @@
-.negro {
-    border: 2px solid black;
+.normal {
+    margin-right: 0.8em;
 }
 
-.azul {
-    border: 2px solid blue;
+.cartWidget {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid gray;
+    padding: 0.2em;
+    background-color: #D1A490;
 }
+
+.cantidadTotal {
+    margin-bottom: 0;
+}
+

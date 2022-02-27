@@ -19,7 +19,7 @@ const ItemListContainer = () => {
             querySnapshot.forEach((doc) => {
                 prods.push({...doc.data(), id: doc.id})
             })
-            // console.log(prods)
+            console.log(prods)
             setProducts(prods)
         }
         getProducts()
@@ -28,6 +28,7 @@ const ItemListContainer = () => {
   
     return (
         <div className='listCont'>
+                <h2> Todos los Productos </h2>
                 <ItemList products={products}></ItemList>    
         </div>
     );

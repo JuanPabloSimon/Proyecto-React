@@ -1,15 +1,69 @@
-import React, {createContext, useState} from 'react'
+import React, { createContext, useState } from 'react';
 
-export const CartContext = createContext() ;
+export const CartContext = createContext();
 
-const initialState = [];
+export const CartProvider = ({ children }) => {
+  const [itemsAgregados, setItemsAgregados] = useState([])
 
-export const CartProvider = ({children}) => {
-
-    const [itemsAgregados, setItemsAgregados] = useState(initialState)
-    // var amount = useState(0)
+  const onAdd = ( id, name, quantity, price, type, imgUrl) => {
     
 
-    
-    return <CartContext.Provider value={[itemsAgregados, setItemsAgregados]}>{children}</CartContext.Provider>
+    setItemsAgregados([  
+      ...itemsAgregados,
+      {
+        id: id,
+        name: name,
+        q: quantity,
+        price: price,
+        type: type,
+        imgUrl: imgUrl,
+      }
+    ]);
+
+    // if (findId) {
+    //     itemsAgregados.cantidad = counter;
+    //     alert('has sumado más ' + itemsAgregados.name + ' - Cantidad total: ' + itemsAgregados.cantidad )
+    // } else {
+    //     if (counter !== 0) {
+    //         itemsAgregados.push(itemsAgregados)
+    //         itemsAgregados.cantidad = counter; 
+    //         alert('Has agregado ' + itemsAgregados.cantidad + ' ' + itemsAgregados.name + ' al carrito')
+    //     } else {
+    //         alert("no se sumaron productos")
+    //     }
+        
+    // }  
+
 }
+  const isInCart = (id) => {
+    const duplicado = itemsAgregados.find( item => item.id === id)
+    if (duplicado) {
+      return true;
+    } else {
+      return false;
+    }
+  } 
+
+  const onDelete = (id) => {
+      setItemsAgregados(itemsAgregados.filter(item => item.id !== id));
+  }
+
+  const clearCart = () => {
+    setItemsAgregados([])
+  }
+
+  return (
+    <CartContext.Provider
+      value={{
+        itemsAgregados,
+        setItemsAgregados,
+        onAdd,
+        onDelete,
+        isInCart,
+        clearCart,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
+};

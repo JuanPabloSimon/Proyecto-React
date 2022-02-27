@@ -3,7 +3,7 @@ import './navBar.css'
 import { Link } from 'react-router-dom';
 import CartWidget from '../cartWidget/cartWidget';
 
-const navBar = () => {
+const NavBar = () => {
   return <nav className='Navegation'>
     <h1> Vivero Simon </h1>
     <ul>
@@ -13,15 +13,23 @@ const navBar = () => {
       <li> <a href='' alt='link-contact' >Contact</a> </li>
       <li> <a href='' alt='link-contact' > <img src={img} alt='imagen-carrito' /> </a> </li> */}
       <Link to='/' className='Link' > Home</Link>
-      <Link to='/' className='Link' > Products</Link>
+      <ul className='dropDown Link'> 
+        <p style={{margin:"0"}}> Productos </p>
+        <ul>
+          <Link className='linkProds' to='/products'> Todos los productos</Link>
+          <Link className='linkProds' to='/categorie/Planta decorativa'>Plantas decorativas</Link>
+          <Link className='linkProds' to='/categorie/Cubre macetas'>Cubre Macetas</Link>
+          <Link className='linkProds' to='/categorie/Cactus'>Cactus</Link>
+        </ul>
+      </ul>
       <Link to='/about' className='Link' > About</Link>
       <Link to='/contact' className='Link' > Contact</Link>
-      <Link to='/Cart' className='Link' > <CartWidget/> </Link>
+      <Link to='/Cart' className='Link carrito' > <CartWidget/> </Link>
     </ul>
   </nav>;
   
 };
 
-export default navBar;
+export default NavBar;
 
 

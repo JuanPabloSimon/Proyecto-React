@@ -16,6 +16,8 @@ import About from './Views/About/About'
 import ItemDetailContainer from './Views/ItemDetailContainer/ItemDetailContainer';
 import Cart from './Views/Cart/cart';
 import Categories from './Views/categories/categories';
+// import Products from './Views/Products/products';
+import ItemListContainer from './components/itemListContainer/itemListContainer';
 
 const App = () => {
   return (
@@ -30,6 +32,7 @@ const App = () => {
           <Route path="/contact" element={<Contact/>} />
           <Route path='/cart' element= {<Cart/>} />
           <Route path='/categorie/:type' element= {<Categories/>} />
+          <Route path='/products' element= {<ItemListContainer/>} />
         </Routes>
         <Footer/>
     </div>

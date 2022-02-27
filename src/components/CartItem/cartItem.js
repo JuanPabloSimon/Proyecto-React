@@ -3,7 +3,7 @@ import './cartItem.css'
 import { CartContext } from '../../Context/cartContext'
 
 const CartItem = ({item}) => {
-  const [itemsAgregados, setItemsAgregados] = useContext(CartContext)
+  const {itemsAgregados, setItemsAgregados} = useContext(CartContext)
 
   const onDelete = () => {
     const findProduct = itemsAgregados.filter(itemId => itemId.id !== item.id)

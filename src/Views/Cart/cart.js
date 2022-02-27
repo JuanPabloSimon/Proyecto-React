@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 
 const Cart = () => {
-  const [itemsAgregados] = useContext(CartContext)
+  const {itemsAgregados} = useContext(CartContext)
   const [cartItems, setCartItems] = useState([])
   
   useEffect(() => {
@@ -22,13 +22,19 @@ const Cart = () => {
     })
   },)
 
+  // const total = () => {
+  //   const cantProd = itemsAgregados.forEach(itemsAgregados.cantidad => {
+      
+  //   });
+  // }
+
   return (
     <div className='cart' >
       {cartItems.length !== 0 ? <CartList items={cartItems}></CartList> : 
       <div className='cartDiv' >
         <h2>No hay productos agregados</h2>
         <h3>¡Agrega Productos al carrito!</h3>
-        <button> <Link to='/' className='cartLink'>Ir a Productos</Link> </button> 
+        <button> <Link to='/products' className='cartLink'>Ir a Productos</Link> </button> 
       </div> }
     </div>
   )

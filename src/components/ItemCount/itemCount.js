@@ -64,7 +64,7 @@ const ItemCount = ({data}) => {
         }
         return numero;
     }
-
+    
     
     
     return ( 
@@ -74,7 +74,7 @@ const ItemCount = ({data}) => {
                 <button className='increment' onClick={() => setCounter(handlerCounterUp(counter, 1))}> + </button>
                 <button className='addToCart buttonDetail' onClick={() => addToCart(counter)} > Agregar al carrito </button>
                 <button className='deleteOfCart buttonDetail' onClick={() => onDelete(data.id)} > Eliminar del carrito</button>
-                <Link to='/' className='continue buttonDetail'> Seguir comprando </Link>
+                <Link to='/products' className='continue buttonDetail'> Seguir comprando </Link>
                 <Link to='/cart' className='finish buttonDetail'> Ir a mi carrito </Link>
             </div>
 

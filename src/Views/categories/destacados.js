@@ -18,7 +18,6 @@ const Destacados = () => {
             setDestacados(prods)
         }
         getData()
-        console.log(destacados)
     },[])
   return (
     <ItemList products={destacados}></ItemList>

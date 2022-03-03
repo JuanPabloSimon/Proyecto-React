@@ -16,8 +16,8 @@ import About from './Views/About/About'
 import ItemDetailContainer from './Views/ItemDetailContainer/ItemDetailContainer';
 import Cart from './Views/Cart/cart';
 import Categories from './Views/categories/categories';
-// import Products from './Views/Products/products';
 import ItemListContainer from './components/itemListContainer/itemListContainer';
+import FinishPurchase from './Views/Finish/finishPurchase';
 
 const App = () => {
   return (
@@ -33,6 +33,7 @@ const App = () => {
           <Route path='/cart' element= {<Cart/>} />
           <Route path='/categorie/:type' element= {<Categories/>} />
           <Route path='/products' element= {<ItemListContainer/>} />
+          <Route path='/finish' element= {<FinishPurchase/>} />
         </Routes>
         <Footer/>
     </div>

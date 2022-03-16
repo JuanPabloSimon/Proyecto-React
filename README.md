@@ -10,11 +10,15 @@ Este directorio es un proyecto creado en el curso de Coder House con el objetivo
     * Datos consumidos desde Firebase
     * Generación de código de compra una vez completado el formulario, el cual contiene valoraciones.
 
-![](https://github.com/JuanPabloSimon/Proyecto-React/blob/master/src/componets/assets/ViveroSimon.mp4f?raw=true")
+## Grabación
 
-
-
-
+https://youtu.be/558UIS6-yAU
 
 ## Dependencias 
+    - Materieal-UI
+    -Animate.css
+    -Bootstrap
+    -React-Router-Dom
+    -Firebase
+    -Validator
 

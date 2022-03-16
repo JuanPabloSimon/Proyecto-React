@@ -3,10 +3,12 @@ import { CartContext } from '../../Context/cartContext';
 // Firebase
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
+import validator from 'validator';
 
 
 import TextField from '@mui/material/TextField';
 import './finishPurchase.css'
+import FinishMessage from './FinishMessage';
 
 const initialState = {
 	name: '',
@@ -16,28 +18,47 @@ const initialState = {
 
 
 const FinishPurchase = () => {
-    const {itemsAgregados, } = useContext(CartContext)
+    const {itemsAgregados} = useContext(CartContext)
 	const [comprador, setComprador] = useState(initialState);
-	// Este estado está destinado a guardar el id de la compra
-	const [purchaseID, setPurchaseID] = useState('');
+	const [purchase, setPurchase] = useState('')
+	const [error, setError] = useState(false);
 
     // console.log(itemsAgregados)
 
+	const validation = () => {
+		if (
+		  validator.isAlpha(comprador.name) &&
+		  validator.isLength(comprador.name, [{ min: 2, max: 25 }]) &&
+		  validator.isAlpha(comprador.lastName) &&
+		  validator.isLength(comprador.lastName, [{ min: 2, max: 15 }]) &&
+		  validator.isEmail(comprador.email) &&
+		  validator.isLength(comprador.email, [{ min: 6, max: 30 }])
+		) {
+		  return true;
+		} else {
+		  return false;
+		}
+	}
+
 	const handleOnChange = (e) => {
-		const { value, name } = e.target;
-		setComprador({ ...comprador, [name]: value });
+			const { value, name } = e.target;
+			setComprador({ ...comprador, [name]: value });
 	};
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		console.log(comprador);
-		const docRef = await addDoc(collection(db, 'Pedidos'), {
-			comprador, ...itemsAgregados
-		});
-		console.log('Document written with ID: ', docRef.id);
-		setPurchaseID(docRef.id);
-		setComprador(initialState);
-		console.log(itemsAgregados);
+		
+		if(validation()) {
+			setError(false)
+			console.log(comprador);
+			const docRef = await addDoc(collection(db, 'Pedidos'), {
+				comprador, ...itemsAgregados
+			});
+			setComprador(initialState);
+			setPurchase(docRef.id)
+		} else {
+			setError(true)
+		}
 	};
 
 	return (
@@ -68,8 +89,14 @@ const FinishPurchase = () => {
 					name='email'
 					onChange={handleOnChange}
 				/>
-				<button className='btnASendAction submit'>Send</button>
+				<div className='textError'>
+					{error ? (
+						<p> Por favor, complete todos los campos correctamente.</p>
+					) : null}
+				</div>
+				<button className='btnASendAction submit'>Enviar Pedido</button>
 			</form>
+			{purchase ? <FinishMessage id={purchase}></FinishMessage> : <div></div>}
 		</div>
 	);
 };

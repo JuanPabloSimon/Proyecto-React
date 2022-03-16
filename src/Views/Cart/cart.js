@@ -8,22 +8,8 @@ import FinishPurchase from '../Finish/finishPurchase'
 
 
 const Cart = () => {
-  const {itemsAgregados} = useContext(CartContext)
-  
-  for (const item of itemsAgregados){
-    // itemsAgregados.forEach(() => {
-    //     console.log(itemsAgregados[0].id)
-    //     console.log("ayuda")
-    //   }
-    //   )
-    console.log(item.name + ' ' + item.q)
-  }
-    // const total = () => {
-    //   const cantProd = itemsAgregados.forEach(itemsAgregados.cantidad => {
-        
-    //   });
-    // }
-
+  const {itemsAgregados, total} = useContext(CartContext)
+  console.log(total)
   return (
     <div className='cart' >
       {itemsAgregados.length !== 0 ? 

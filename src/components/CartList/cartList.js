@@ -2,7 +2,6 @@ import React from 'react'
 import CartItem from '../CartItem/cartItem';
 import CartCount from '../cartCount/cartCount';
 import './cartList.css'
-import { Link } from 'react-router-dom';
 
 const Cartlist = ({items}) => {
   return (
@@ -23,8 +22,6 @@ const Cartlist = ({items}) => {
             ))
           }
         </ul>
-        <h5> Precio Final: </h5>
-        <Link to='/finish'><button className='buttonFinish'> Finalizar Compra </button> </Link>
       </aside>
       
     </div>

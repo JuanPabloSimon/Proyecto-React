@@ -11,7 +11,6 @@ const CartWidget = () => {
     return (
       <div className='cartWidget'>
         <img src={img} alt='imagen-carrito' className={itemsAgregados.length !== 0 ? 'animate__animated animate__swing normal' :   'normal' }  />
-        <p className='cantidadTotal'> 0 </p>
       </div>
   )
 }

@@ -1,13 +1,14 @@
 import React, { createContext, useState } from 'react';
+import toast from 'react-hot-toast';
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [itemsAgregados, setItemsAgregados] = useState([])
+  const [total, setTotal] = useState(0)
 
   const onAdd = ( id, name, quantity, price, type, imgUrl) => {
     
-
     setItemsAgregados([  
       ...itemsAgregados,
       {
@@ -35,17 +36,17 @@ export const CartProvider = ({ children }) => {
     // }  
 
 }
-  const isInCart = (id) => {
-    const duplicado = itemsAgregados.find( item => item.id === id)
-    if (duplicado) {
-      return true;
-    } else {
-      return false;
-    }
+  const isInCart = (product) => {
+    return itemsAgregados.some((item) => item.id === product.id);
   } 
 
-  const onDelete = (id) => {
+  const onDelete = (id, name) => {
+    const encontrado = itemsAgregados.find(item => item.id === id)
+    if(encontrado){
+      const deleted = toast.success('Has eliminado todos los todas las unidades de ' + name)
+    }
       setItemsAgregados(itemsAgregados.filter(item => item.id !== id));
+      
   }
 
   const clearCart = () => {
@@ -61,6 +62,8 @@ export const CartProvider = ({ children }) => {
         onDelete,
         isInCart,
         clearCart,
+        total, 
+        setTotal
       }}
     >
       {children}

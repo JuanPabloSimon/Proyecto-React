@@ -22,8 +22,7 @@ const NavBar = () => {
           <Link className='linkProds' to='/categorie/Cactus'>Cactus</Link>
         </ul>
       </ul>
-      <Link to='/about' className='Link' > About</Link>
-      <Link to='/contact' className='Link' > Contact</Link>
+      <a className='Link' href='https://wa.me/+5492616351701' target='blank'>Contacto</a>
       <Link to='/Cart' className='Link carrito' > <CartWidget/> </Link>
     </ul>
   </nav>;

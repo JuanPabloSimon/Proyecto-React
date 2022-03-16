@@ -11,13 +11,10 @@ import { CartProvider } from './Context/cartContext';
 
 //views 
 import Home from './Views/Home/Home';
-import Contact from './Views/Contact/Contact'
-import About from './Views/About/About'
 import ItemDetailContainer from './Views/ItemDetailContainer/ItemDetailContainer';
 import Cart from './Views/Cart/cart';
 import Categories from './Views/categories/categories';
 import ItemListContainer from './components/itemListContainer/itemListContainer';
-import FinishPurchase from './Views/Finish/finishPurchase';
 
 const App = () => {
   return (
@@ -28,12 +25,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/detail/:id" element={<ItemDetailContainer/>} />
-          <Route path="/About" element={<About/>} />
-          <Route path="/contact" element={<Contact/>} />
           <Route path='/cart' element= {<Cart/>} />
           <Route path='/categorie/:type' element= {<Categories/>} />
           <Route path='/products' element= {<ItemListContainer/>} />
-          <Route path='/finish' element= {<FinishPurchase/>} />
         </Routes>
         <Footer/>
     </div>
